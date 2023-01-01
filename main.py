@@ -40,11 +40,11 @@ class Window(tk.Tk):
         self.game_edit = tk.Frame(self.tabs)
         
         # Code Edit Frame
-        self.editor = CodeView(self.code_edit, lexer=PythonLexer,color_scheme="ayu-dark",undo=True,maxundo=-1)
+        self.editor = CodeView(self.code_edit, lexer=PythonLexer,color_scheme="ayu-dark")
         self.editor.pack(expand=True,fill=tk.BOTH)
 
         # Actor Edit Frame
-        self.add_button = tk.Button(self.actor_edit,text="Click Me!")
+        # self.add_button = tk.Button(self.actor_edit,text="Click Me!")
         self.actors = ttk.Treeview(self.actor_edit)
         self.actors.heading("#0",text="Actors",anchor=tk.W)
         self.actors.pack(expand=True,fill=tk.BOTH)
